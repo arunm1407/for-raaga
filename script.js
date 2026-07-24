@@ -63,9 +63,26 @@ revealEls.forEach((el) => observer.observe(el));
 
 const canvas = document.getElementById("sparkles");
 const ctx = canvas.getContext("2d");
-const colors = ["#e8a4b0", "#c56b7c", "#7d9b8a", "#f0d2a8", "#fbf6f1", "#ff8fab"];
+const colors = ["#ff8fab", "#ff6b8a", "#ffd6a8", "#fff5f8", "#ffb3c4", "#ffe066"];
+const emojis = ["✨", "💖", "💕", "⭐", "💗", "🌟", "💓"];
+const emojiRain = document.getElementById("emojiRain");
 let particles = [];
 let animating = false;
+
+function spawnEmoji() {
+  if (!emojiRain) return;
+  const el = document.createElement("span");
+  el.className = "float-emoji";
+  el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  el.style.left = `${Math.random() * 100}vw`;
+  el.style.fontSize = `${0.9 + Math.random() * 1.1}rem`;
+  el.style.animationDuration = `${6 + Math.random() * 7}s`;
+  emojiRain.appendChild(el);
+  setTimeout(() => el.remove(), 14000);
+}
+
+for (let i = 0; i < 12; i++) setTimeout(spawnEmoji, i * 400);
+setInterval(spawnEmoji, 700);
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -119,7 +136,8 @@ function tick() {
 
 document.getElementById("celebrateBtn").addEventListener("click", (e) => {
   const rect = e.currentTarget.getBoundingClientRect();
-  burst(rect.left + rect.width / 2, rect.top + rect.height / 2, 140);
+  burst(rect.left + rect.width / 2, rect.top + rect.height / 2, 160);
+  for (let i = 0; i < 18; i++) setTimeout(spawnEmoji, i * 60);
 });
 
 const roomReply = document.getElementById("roomReply");
