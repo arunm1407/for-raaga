@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Raaga is 22 (Divya made a whole website, don’t laugh)</title>
+    <meta
+      name="description"
+      content="Happy 22nd Birthday Raaga — a slightly unhinged love letter from your sister Divya."
+    />
+    <meta property="og:title" content="Raaga is 22 🎂" />
+    <meta
+      property="og:description"
+      content="From Divya: I built you a website. Yes, really. Happy birthday."
+    />
+    <meta property="og:image" content="assets/raaga-birthday-fun.png" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+    <canvas id="sparkles" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+      <a class="nav-brand" href="#top">raaga.exe</a>
+      <div class="nav-links">
+        <a href="#letter">rant</a>
+        <a href="#room">room</a>
+        <a href="#gallery">photos</a>
+        <a href="#wish">cake</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-media">
+        <img
+          src="assets/raaga-birthday-fun.png"
+          alt="Raaga celebrating her birthday"
+          class="hero-photo"
+        />
+        <div class="hero-veil"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-from animate-in">
+          from your sister Divya · an overproduced birthday text
+        </p>
+        <h1 class="hero-name animate-in delay-1">
+          <span class="name-script">Raaga</span>
+          <span class="name-rest">is illegally 22 now</span>
+        </h1>
+        <p class="hero-line animate-in delay-2">
+          Hi baby sister / professional room thief. I could’ve sent a WhatsApp
+          forward. Instead I made you a website… and a polite eviction notice.
+        </p>
+        <div class="hero-cta animate-in delay-3">
+          <a class="btn btn-primary" href="#room">About that room…</a>
+          <a class="btn btn-ghost" href="#gallery">Skip to my photos</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#letter" aria-label="Scroll">
+        <span></span>
+      </a>
+    </header>
+
+    <main>
+      <section class="section letter" id="letter">
+        <div class="letter-wrap reveal">
+          <p class="eyebrow">sister voice notes, website edition</p>
+          <h2>Raagaaaaa,</h2>
+          <div class="letter-body">
+            <p>
+              First of all — happy birthday. Second of all — stop scrolling like
+              you’re judging my design choices. I tried my best. You inspired
+              half of this… and delayed the other half by existing too cutely in
+              these photos.
+            </p>
+            <p>
+              You’re my little sister, which means you’re stuck with me forever —
+              the teasing, the sudden plans, the “I’m almost ready” timeline, and
+              your Olympic-level talent for scamming me out of… well… my entire
+              room. I’m currently roomless. Homeless-but-make-it-sister. Iconic
+              of you, honestly.
+            </p>
+            <p>
+              22 looks good on you. Like, annoyingly good. The kind of good where
+              I pretend I’m cool about it, then secretly make you a whole
+              website and ask for my room back in public. This is that.
+            </p>
+          </div>
+          <div class="signed-by single">
+            <div>
+              <strong>Divya</strong>
+              <span>elder sister · current couch resident · birthday menace</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section room-case" id="room">
+        <div class="room-card reveal">
+          <p class="eyebrow">urgent sister business</p>
+          <h2>Case file: The Great Room Heist</h2>
+          <p class="room-lead">
+            Dear Raaga, professional scammer of Divya,
+          </p>
+          <div class="room-story">
+            <p>
+              Step 1: you smiled.<br />
+              Step 2: I said “fine, temporarily.”<br />
+              Step 3: you claimed the room like it came with your birth certificate.<br />
+              Step 4: Divya = roomless. Raaga = landlord. Parents = pretending not to notice.
+            </p>
+            <p>
+              You didn’t just take the room. You took the vibe, the charging points,
+              the good lighting for selfies, and my last bit of dignity. Respect.
+              Now give it back. Or at least negotiate like a soft criminal.
+            </p>
+          </div>
+
+          <div class="room-status">
+            <div class="status-pill bad">
+              <span>Divya</span>
+              <strong>ROOMLESS 😭</strong>
+            </div>
+            <div class="status-pill good">
+              <span>Raaga</span>
+              <strong>FULL OCCUPANCY 👑</strong>
+            </div>
+          </div>
+
+          <p class="room-ask">
+            So… birthday girl… what’s the deal? How do I get my room back?
+          </p>
+
+          <div class="room-actions" id="roomActions">
+            <button type="button" class="btn btn-primary" data-reply="yes">
+              Fine, take the room back 🏠
+            </button>
+            <button type="button" class="btn btn-soft" data-reply="share">
+              We can… share? maybe?
+            </button>
+            <button type="button" class="btn btn-ghost-dark" data-reply="no">
+              Nope. It’s mine forever 😌
+            </button>
+          </div>
+
+          <div class="room-reply" id="roomReply" hidden></div>
+        </div>
+      </section>
+
+      <section class="section truths" id="truths">
+        <div class="section-head center">
+          <p class="eyebrow">sworn sister affidavits</p>
+          <h2>Things I say about you when you’re not in the room</h2>
+          <p class="section-sub">
+            (Which is funny, because somehow YOU are always in the room. My room.)
+          </p>
+        </div>
+
+        <div class="sticky-grid">
+          <article class="sticky s1 reveal">
+            <p class="sticky-who">room scandal</p>
+            <p>
+              “She scammed me so politely I almost said thank you while packing
+              my stuff. Mastermind behavior.”
+            </p>
+          </article>
+          <article class="sticky s2 reveal delay-1">
+            <p class="sticky-who">real talk</p>
+            <p>
+              “She’s my baby sister but also the CEO of weekend plans. One smile
+              and I’m booking an auto… and losing furniture.”
+            </p>
+          </article>
+          <article class="sticky s3 reveal delay-2">
+            <p class="sticky-who">also real talk</p>
+            <p>
+              “She laughs like the punchline was personal. Then I laugh because
+              her laugh is the actual punchline.”
+            </p>
+          </article>
+          <article class="sticky s4 reveal">
+            <p class="sticky-who">mirror selfie committee</p>
+            <p>
+              “Half our camera roll is ‘quick photo’ turning into a full fashion
+              campaign in a random store aisle.”
+            </p>
+          </article>
+          <article class="sticky s5 reveal delay-1">
+            <p class="sticky-who">getting ready lore</p>
+            <p>
+              “ ‘I’m almost ready’ is not a time. It’s a lifestyle. I’ve
+              accepted this. Barely.”
+            </p>
+          </article>
+          <article class="sticky s6 reveal delay-2">
+            <p class="sticky-who">honestly tho</p>
+            <p>
+              “You’re kind in the quiet way. Even while committing real estate
+              fraud against your own sister. Balance.”
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="section-head">
+          <p class="eyebrow">evidence I love you</p>
+          <h2>Your camera roll, but with sister commentary</h2>
+          <p class="section-sub">
+            Caption game only. No filter can save you from me.
+          </p>
+        </div>
+
+        <div class="bento">
+          <figure class="bento-item tall reveal">
+            <img src="assets/raaga-birthday-soft.png" alt="Raaga on her birthday" />
+            <figcaption>
+              Look at you being all soft under fairy lights. I almost behaved.
+            </figcaption>
+          </figure>
+          <figure class="bento-item reveal delay-1">
+            <img src="assets/raaga-flowers.png" alt="Raaga holding flower garlands" />
+            <figcaption>
+              Flower girl era. The roses understood the assignment.
+            </figcaption>
+          </figure>
+          <figure class="bento-item reveal delay-2">
+            <img src="assets/raaga-temple.png" alt="Raaga at the temple" />
+            <figcaption>
+              Temple wall said “be dramatic.” You said “okay, gently.”
+            </figcaption>
+          </figure>
+          <figure class="bento-item wide reveal">
+            <img src="assets/raaga-birthday-fun.png" alt="Raaga with birthday glasses" />
+            <figcaption>
+              The glasses said HAPPY BIRTHDAY so you didn’t have to. Peace ✌️✌️
+            </figcaption>
+          </figure>
+          <figure class="bento-item reveal delay-1">
+            <img src="assets/raaga-garden.png" alt="Raaga in the garden" />
+            <figcaption>
+              Phone in hand, world on pause. Main character buffering.
+            </figcaption>
+          </figure>
+          <figure class="bento-item reveal delay-2">
+            <img src="assets/raaga-hero.png" alt="Raaga outdoors" />
+            <figcaption>
+              That half-smile that means you’re about to win an argument.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section sisters" id="sisters">
+        <div class="sisters-grid">
+          <div class="sisters-copy reveal">
+            <p class="eyebrow">sister tax</p>
+            <h2>Divya &amp; Raaga™</h2>
+            <p>
+              Same mirror. Same shopping bag. Same “one minute” that lasts
+              forever. Different sarees, same chaos frequency. Us together is
+              basically a private language — half teasing, half teamwork, full
+              volume.
+            </p>
+            <p>
+              I’ll swear I’m the mature one. You’ll smile. Case closed. Appeal
+              denied.
+            </p>
+            <p class="soft-note">
+              Field notes from me: if we’re both laughing at the same time,
+              something expensive or emotionally devastating is about to happen.
+              Usually both.
+            </p>
+          </div>
+          <div class="sisters-photos">
+            <figure class="photo-stack primary reveal delay-1">
+              <img src="assets/sisters-saree.png" alt="Divya and Raaga in sarees" />
+              <figcaption>Festival mode unlocked. Parents proud. Us, thriving.</figcaption>
+            </figure>
+            <figure class="photo-stack secondary reveal delay-2">
+              <img src="assets/sisters-sunday.png" alt="Divya and Raaga on a Sunday outing" />
+              <figcaption>Sunday = sisters + thumbs up + zero chill.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section childhood" id="childhood">
+        <div class="childhood-layout">
+          <figure class="childhood-frame reveal">
+            <img src="assets/raaga-childhood.png" alt="Raaga as a child" />
+          </figure>
+          <div class="childhood-copy reveal delay-1">
+            <p class="eyebrow">throwback thursday but make it birthday</p>
+            <h2>Baby Raaga already had the aura</h2>
+            <p>
+              Exhibit A: tiny human, big jewelry, calm face that says
+              “I know things.” Looking at this photo like — ohhh so the
+              confidence didn’t arrive at 22. It was pre-installed.
+            </p>
+            <p>
+              From that little girl to this birthday queen… yeah. I’m soft.
+              Don’t tell anyone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section together" id="together">
+        <div class="section-head center">
+          <p class="eyebrow">the gang</p>
+          <h2>Us, looking suspiciously happy</h2>
+          <p class="section-sub">
+            Mirror selfies, random store aisles, and the sacred art of “quick
+            photo” turning into twenty.
+          </p>
+        </div>
+        <div class="duo">
+          <figure class="duo-card reveal">
+            <img src="assets/family-trio.png" alt="Family outing mirror selfie" />
+            <figcaption>
+              <strong>Store aisle legends</strong>
+              One outing, three opinions, infinite photos. Classic.
+            </figcaption>
+          </figure>
+          <figure class="duo-card reveal delay-1">
+            <img src="assets/sisters-sunday.png" alt="Divya and Raaga Sunday selfie" />
+            <figcaption>
+              <strong>Core memory unlocked</strong>
+              Sisters on a Sunday — thumbs up, shoes everywhere, happiness
+              ridiculous.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section wishes" id="wishes">
+        <div class="section-head center">
+          <p class="eyebrow">22 tiny chaos blessings</p>
+          <h2>Birthday wishes (sister edition)</h2>
+          <p class="section-sub">
+            Less “may your path be blessed,” more “please keep being you.”
+          </p>
+        </div>
+        <div class="wish-grid" id="wishGrid"></div>
+      </section>
+
+      <section class="section finale" id="wish">
+        <div class="finale-card reveal">
+          <p class="finale-script">okay fine, I’m emotional</p>
+          <h2>Happy 22nd, Raaga Sudha V.</h2>
+          <p>
+            You’re funny. You’re soft. You’re a room-stealing menace. And I love
+            you a stupid amount. I’ve got you — today, tomorrow, and every
+            dramatic “I’m almost ready” after that. (Still want my room back
+            though.) Now press the button before I get even more sentimental.
+          </p>
+          <button type="button" class="btn btn-primary" id="celebrateBtn">
+            Blast the birthday sparkles ✨
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Hand-made (with mild panic) for <strong>Raaga</strong>
+      </p>
+      <p class="tiny">
+        by Divya · with a little help from Arunkumar · please laugh, then cry a little
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
