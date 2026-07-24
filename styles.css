@@ -24,22 +24,41 @@
 
 html {
   scroll-behavior: smooth;
+  background: #0d0a0e;
+  color-scheme: dark;
 }
 
-body {
+body,
+body.theme-dark {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--ink);
-  background:
-    radial-gradient(900px 520px at 10% -10%, rgba(255, 107, 138, 0.18), transparent 55%),
-    radial-gradient(800px 480px at 100% 20%, rgba(255, 214, 168, 0.08), transparent 50%),
-    radial-gradient(700px 400px at 50% 100%, rgba(125, 155, 138, 0.1), transparent 55%),
+  color: #f6eef2;
+  background-color: #0d0a0e;
+  background-image:
+    radial-gradient(900px 520px at 10% -10%, rgba(255, 107, 138, 0.22), transparent 55%),
+    radial-gradient(800px 480px at 100% 20%, rgba(255, 214, 168, 0.1), transparent 50%),
+    radial-gradient(700px 400px at 50% 100%, rgba(125, 155, 138, 0.12), transparent 55%),
     linear-gradient(180deg, #0d0a0e 0%, #161018 40%, #120e14 100%);
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   color-scheme: dark;
+}
+
+main,
+.section {
+  background: transparent;
+}
+
+.letter-wrap,
+.room-card,
+.wish-card,
+.duo-card,
+.finale-card,
+.photo-stack {
+  background-color: #241820 !important;
+  color: #f6eef2;
 }
 
 img {
@@ -643,7 +662,7 @@ a {
 
 .sisters {
   background:
-    radial-gradient(700px 400px at 10% 20%, rgba(232, 164, 176, 0.16), transparent 60%);
+    radial-gradient(700px 400px at 10% 20%, rgba(255, 107, 138, 0.12), transparent 60%);
 }
 
 .sisters-grid {
